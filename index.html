@@ -14,10 +14,16 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#lugares">Lugares de Interés</a></li>
-            <li><a href="#mapa">Mapa</a></li>
             <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#comida">Comida Tipica</a></li>
+            <li><a href="#actividades">Actividades Tipicas</a></li>
+            <li><a href="#lugares">Tours</a></li>
+            <li><a href="#mitos">Leyendas</a></li>
+            <li><a href="#arte-musica">Arte y Musica</a></li>
+            <li><a href="#planes">Eventos y Festividades</a></li>
+            <li><a href="#equipos">Equipos de Futbol</a></li>
+            <li><a href="#deportes">Deportes</a></li>
             <li><a href="#cultura">Cultura</a></li>
             <li><a href="#mapa">Mapa</a></li>
             <li><a href="./video.html">Video</a></li>
@@ -47,7 +53,7 @@
         <img src="./img/2.jpg" alt="Actividades en Cali" class="img-fluid unique-style">
         <img src="./img/salsa.jpg" alt="Salsa en Cali" class="img-fluid">
         <img src="./img/toro.jpeg" alt="Plaza de toros" class="img-fluid">
-        <p>Bailar salsa, visitar el río Pance y visitar la paza de toros son algunas de las actividades que no te puedes perder.</p>
+        <p>Bailar salsa, visitar el río Pance y visitar la plaza de toros son algunas de las actividades que no te puedes perder.</p>
     </section>
 
     <!-- Nueva Sección: Arte y Música -->
@@ -77,7 +83,7 @@
                     </div>
                 </section>
                 <section id="lugares">
-                    <h2>Lugares de Interés</h2>
+                    <h2>Tours</h2>
                     <div class="slider-container">
                         <div class="slider">
                             <div class="slide"><img src="./img/2.png" alt="Imagen 1"></div>
@@ -215,14 +221,13 @@
                     </ul>
                 </section>
             
-                <section id="eventos">
-                    <h2>Eventos y Festividades de Cali</h2>
-                    <p>Cali es conocida por su vibrante calendario de eventos y festividades. La ciudad cobra vida durante los festivales y actividades culturales que reúnen a miles de personas:</p>
-                    <ul>
-                        <li><strong>Feria de Cali - Diciembre:</strong> El evento más importante de la ciudad, lleno de desfiles, conciertos, competiciones de salsa y una feria con comida típica y artesanías.</li>
-                        <li><strong>Festival de Música del Pacífico - Julio:</strong> Un evento que celebra la música, la danza y las tradiciones del Pacífico colombiano, con ritmos como el currulao y el mapalé.</li>
-                        <li><strong>Festival de Salsa - Agosto:</strong> Cali, la capital mundial de la salsa, organiza este festival lleno de conciertos y presentaciones de los mejores exponentes de la salsa del mundo.</li>
-                    </ul>
+                <section id="equipos">
+                    <h2>Equipos de Futbol</h2>
+                    <p>A continuacion se presentan imagenes de los escudos de equipos y filiales mas representativas de Cali, Colombia.</p>
+                    
+                    <div class="image-container">
+                        <img src="./img/futeibol.png" alt="Escudo de Equipos" class="img-fluid">
+                    </div>
                 </section>
             </aside>
         </div>
@@ -236,7 +241,60 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127446.34053144573!2d-76.55519464462934!3d3.4235062536281164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca%2C%20Colombia!5e0!3m2!1ses!2ses!4v1740325151114!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </div>
+    <button class="btnSubir" id="btnSubir" title="Volver arriba">↑</button>
+   
+            <script>
+                    // Obtén el botón
+                    var btnSubir = document.getElementById("btnSubir");
 
+                    // Muestra el botón cuando el usuario haya desplazado 20px desde la parte superior de la página
+                    window.onscroll = function() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        btnSubir.style.display = "block";
+                    } else {
+                        btnSubir.style.display = "none";
+                    }
+                    };
+
+                    // Desplaza la página hacia arriba cuando el usuario hace clic en el botón
+                    btnSubir.onclick = function() {
+                    document.body.scrollTop = 0; // Para Safari
+                    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+                    }; 
+                </script>
+                
+                    <style>
+                        /* Estilos del botón */
+                        #btnSubir {
+                            display: none; /* Oculta el botón por defecto */
+                            position: fixed; /* Fija el botón en la pantalla */
+                            bottom: 20px; /* Distancia desde la parte inferior */
+                            right: 20px; /* Distancia desde la parte derecha */
+                            z-index: 99; /* Asegura que esté por encima de otros elementos */
+                            width: 50px; /* Ancho del botón */
+                            height: 50px; /* Alto del botón */
+                            border: none; /* Sin borde */
+                            outline: none; /* Sin contorno */
+                            background-color: #007BFF; /* Color de fondo */
+                            color: white; /* Color del texto (flecha) */
+                            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+                            border-radius: 50%; /* Hace el botón redondo */
+                            font-size: 24px; /* Tamaño de la flecha */
+                            line-height: 50px; /* Centra la flecha verticalmente */
+                            text-align: center; /* Centra la flecha horizontalmente */
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+                            transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+                        }
+                
+                        #btnSubir:hover {
+                            background-color: #028100; /* Cambia el color de fondo al pasar el ratón */
+                        }
+                
+                        /* Desplazamiento suave */
+                        html {
+                            scroll-behavior: smooth;
+                        }
+                    </style>
     <!-- Footer -->
     <footer class="footer">
         <p>Derechos reservados © 2025</p>

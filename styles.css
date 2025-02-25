@@ -6,7 +6,6 @@ body {
     padding: 0;
     background-color: #f5f5f5;
 }
-
 header {
     background-color: #008080;
     color: white;
@@ -27,7 +26,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 30px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -124,19 +123,10 @@ ul li {
     margin-bottom: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     nav ul {
         flex-direction: column;
         text-align: center;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    aside, section {
-        width: 100%;
-        margin: 10px 0;
     }
 }
 
@@ -148,4 +138,42 @@ footer {
     margin-top: 20px;
     clear: both; /* Asegura que el footer no se quede pegado a otros elementos */
     margin-top: auto; /* Empuja el footer al final */
+}
+
+@media screen and (max-width: 700px) {
+
+    nav ul li {
+        margin: 10px 0; /* Aumenta el espacio entre elementos */
+    }
+
+    /* Ajustes para el layout principal */
+    .row {
+        flex-direction: column; /* Cambia la dirección a vertical */
+    }
+
+    aside, section {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Ajusta el margen */
+    }
+
+    /* Ajustes para la galería de imágenes */
+    .gallery img {
+        flex: 1 1 100%; /* Cada imagen ocupa el 100% del ancho */
+        max-width: 100%; /* Asegura que no se desborde */
+    }
+
+    /* Ajustes para el mapa */
+    #mapa-container {
+        padding: 10px; /* Reduce el padding */
+    }
+
+    iframe {
+        width: 100%; /* Asegura que el mapa ocupe todo el ancho */
+        height: 300px; /* Ajusta la altura */
+    }
+
+    /* Ajustes para el footer */
+    footer {
+        padding: 15px; /* Aumenta el padding para mejor legibilidad */
+    }
 }
